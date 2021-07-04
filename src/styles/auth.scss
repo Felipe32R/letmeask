@@ -35,8 +35,8 @@
 
   main{
     flex: 8;
-
     padding: 0 32px;
+    
 
     display: flex;
     align-items: center;
@@ -53,6 +53,7 @@
 
      > img{
       align-self: center;
+      margin-bottom: 1rem;
     }
 
     h2{
@@ -142,6 +143,30 @@
     }
   }
 
+  .user{
+    display: flex;
+    align-items: center;
+   
+    flex-direction: column;
+    margin-bottom: 2rem;
+    
+
+    p{
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+      color: #737380 ;
+
+      margin-bottom: 1rem;
+    }
+
+    
+    > img{
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+    }
+  }
   
 
 }
