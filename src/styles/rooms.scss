@@ -11,12 +11,18 @@
 
       display: flex;
       justify-content:space-between;
-      align-items:center
+      align-items:center;
+      > img {
+        max-height: 45px;
+      }
+      > div {
+        display: flex;
+        gap: 16px;
 
-      
-    }
-    img {
-      max-height: 45px;
+        button{
+          height: 40px;
+        }
+      }
     }
   }
 
@@ -24,6 +30,7 @@
     max-width: 800px;
     margin: 0 auto;
 
+    
     .room-title{
       margin: 32px 0 24px;
       display: flex;
@@ -46,6 +53,8 @@
     }
 
     form{
+      
+  
       textarea{
         width: 100%;
         min-height: 130px;
@@ -57,9 +66,15 @@
         resize: none;
 
         font-size: 20px;
-
-       
+        
       }
+
+      textarea:focus {
+        background:#ececec ;
+        
+      }
+      
+      
 
       .form-footer{
         display:flex;
@@ -75,7 +90,7 @@
             height:42px;
             border-radius: 50%;
           }
-          > span{
+           span{
             margin-left: 10px;
             color: #29292e;
             font-weight: 500;
@@ -83,7 +98,7 @@
           }
         }
 
-        span{
+        > span{
           font-size: 14px;
           color: #737380;
           font-weight: 500;
@@ -100,6 +115,12 @@
         }
       }
     }
+
+    .question-list{
+      margin-top: 64px;
+      margin-bottom: 128px;
+    }
   }
 
+  
 }
