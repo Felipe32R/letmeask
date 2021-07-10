@@ -1,6 +1,6 @@
 
 
-![logo](G:\nlw\NLW6\letmeask\src\assets\images\logo.svg)
+![logo](https://github.com/Felipe32R/letmeask/blob/main/src/assets/images/logo.svg)
 
 
 
@@ -30,9 +30,11 @@ The admin can also highlight, mark as answered and delete questions:
 
 
 
-![room1](C:\Users\Felipe\Documents\room1.png)
+![room1](https://user-images.githubusercontent.com/73653212/125150699-3c2d5280-e118-11eb-871b-e06fc1b2f563.png)
 
-![room2](C:\Users\Felipe\Documents\room2.png)
+![room2](https://user-images.githubusercontent.com/73653212/125150702-4a7b6e80-e118-11eb-8bf2-ddf5a442e102.png)
+
+
 
 
 
@@ -40,7 +42,7 @@ The admin can also highlight, mark as answered and delete questions:
 
 The users can send questions and send likes on the questions
 
-![room3](C:\Users\Felipe\Documents\room3.png)
+![room3](https://user-images.githubusercontent.com/73653212/125150709-5cf5a800-e118-11eb-95be-19519ad90c4a.png)
 
 
 
