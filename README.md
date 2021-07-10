@@ -1,4 +1,4 @@
-​																			![logo](https://github.com/Felipe32R/letmeask/blob/main/src/assets/images/logo.svg)
+<center><img src="https://github.com/Felipe32R/letmeask/blob/main/src/assets/images/logo.svg"></center>
 
 
 
