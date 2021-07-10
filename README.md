@@ -1,46 +1,84 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+![logo](G:\nlw\NLW6\letmeask\src\assets\images\logo.svg)
 
-In the project directory, you can run:
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+An useful Q&A platform developed in **#NLW Together** by [**Rocketseat**](https://rocketseat.com.br/) using [**React**](https://pt-br.reactjs.org/), [**Typescript**](https://www.typescriptlang.org/) and  [**Firebase**](https://firebase.google.com/?hl=pt).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Google authentication
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+![auth](https://user-images.githubusercontent.com/73653212/125149573-1b60ff00-e110-11eb-81e5-7c3b7e792399.gif)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Creating a room
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![createroom](https://user-images.githubusercontent.com/73653212/125149568-1439f100-e110-11eb-8732-db82a3e93a93.gif)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+After this, all you need is share the code to people join your room and start sending questions! 😁
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can end the room when you want.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The admin can also highlight, mark as answered and delete questions:
+
+
+
+![room1](C:\Users\Felipe\Documents\room1.png)
+
+![room2](C:\Users\Felipe\Documents\room2.png)
+
+
+
+#### Normal user view
+
+The users can send questions and send likes on the questions
+
+![room3](C:\Users\Felipe\Documents\room3.png)
+
+
+
+#### Firebase Realtime Database rules
+
+````sql
+{
+  "rules": {
+    "rooms":{
+      ".read": false,
+    	".write": "auth != null",
+      "$roomId":{
+        ".read": true,
+        ".write": "auth != null && (!data.exists() || data.child('authorId').val() == auth.id)",
+      	"questions":{
+          ".read": true,
+          ".write": "auth != null && (!data.exists() || data.parent().child('authorId').val() == auth.id)",
+        "likes":{
+          ".read":true,
+          ".write":"auth != null && (!data.exists() || data.child('authorId').val() == auth.id)",
+        	}  
+      	}
+      }
+    }
+  }
+}
+
+````
+
+#### Firebase configurations with react (.env.local)
+
+````sql
+REACT_APP_API_KEY="AIzaSyBgNMnL1Q8EzqxmfO7cBiDZduI17lo1QXA"
+REACT_APP_AUTH_DOMAIN="letmeask-6022d.firebaseapp.com"
+REACT_APP_DATABASE_URL="https://letmeask-6022d-default-rtdb.firebaseio.com"
+REACT_APP_PROJECT_ID="letmeask-6022d"
+REACT_APP_STORAGE_BUCKET="letmeask-6022d.appspot.com"
+REACT_APP_MESSAGING_SENDER_ID="959342397726"
+REACT_APP_APP_ID="1:959342397726:web:9794d538f7dfb4aa36a10f"
+````
+
