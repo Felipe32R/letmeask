@@ -1,10 +1,12 @@
 
 
-![logo](https://github.com/Felipe32R/letmeask/blob/main/src/assets/images/logo.svg)
+<center>![logo](https://github.com/Felipe32R/letmeask/blob/main/src/assets/images/logo.svg)</center>
 
 
 
 An useful Q&A platform developed in **#NLW Together** by [**Rocketseat**](https://rocketseat.com.br/) using [**React**](https://pt-br.reactjs.org/), [**Typescript**](https://www.typescriptlang.org/) and  [**Firebase**](https://firebase.google.com/?hl=pt).
+
+
 
 #### Google authentication
 
@@ -45,6 +47,18 @@ The users can send questions and send likes on the questions
 ![room3](https://user-images.githubusercontent.com/73653212/125150709-5cf5a800-e118-11eb-95be-19519ad90c4a.png)
 
 
+
+#### Follow these steps below to run this application
+
+```bash
+$ git clone https://github.com/Felipe32R/letmeask.git  
+
+$ cd letmeask
+
+npm start 
+or 
+yarn start
+```
 
 #### Firebase Realtime Database rules
 
