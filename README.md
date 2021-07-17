@@ -53,7 +53,7 @@ $ git clone https://github.com/Felipe32R/letmeask.git
 
 $ cd letmeask
 
-npm start 
+npm starttttt
 or 
 yarn start
 ```
